@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    font-size: 62.5%;
+
+    --background: #282828;
+    --color: #f1f1f1;
+    --background-console: #141414;
+    --background-header-console: #222222;
+    --green: #0dcc2d;
+    --green-active: #128c26;
+    --color-terminal: #f1f1f1;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    font-size: 1.6rem;
+
+    color: var(--color);
+    background-color: var(--background);
+
+    display: flex;
+    justify-content: center;
+}
+.console{
+
+    width: 630px;
+    height: 90%;
+
+    margin: 25px;
+
+    background-color: var(--background-console);
+    border-radius: 0 0 30px 30px;
+
+    box-shadow: 5px 4px 6px 0px #131313ae;
+}
+.console header{
+    height: 45px;
+    background-color: var(--background-header-console);
+    padding-inline: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius:0 0 15px 15px;
+    box-shadow: 0px 3px 4px 0px #00000053;
+
+}
+.console header h1{
+    font-size: 1.4rem;
+}
+.console header .boll{
+    width: 18px;
+    height: 18px;
+
+    background-color: var(--green);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.tela{
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.console main {
+    width: 100%;
+    position: relative;
+    margin-top: 21px;
+    padding-inline: 20px;
+    height: 78%;
+    overflow-y: scroll;
+
+    color: var(--color-terminal);
+}
+.console main::-webkit-scrollbar{
+    background-color: transparent;
+    width: 10px;
+}
+.console main::-webkit-scrollbar-thumb{
+    background-color: var(--background-header-console);
+    border-radius: 10px;
+}
+.input{
+    position: inherit;
+    bottom: 0px;
+
+    margin-top: 2rem;
+    background-color: #212122;
+    color: var(--color-terminal);
+    width: 95%;
+
+    padding: 0.5rem 2rem;
+
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+.input > span{
+    font-size: 1.1rem;
+}
+.input  > input{
+    all: unset;
+    margin-left: 10px;
+    width: 90%;
+}
+.input  > input::placeholder{
+    color: var(--green);
+}
+
+.input > div{
+    margin-block: 1.4rem;
+}
+
+.console-text section > h3{
+    margin-block: 1.5rem;
+    text-decoration: underline;
+}
+.console-text section > p > span{
+    color: var(--green);
+}
+.console-text section > h4{
+    margin-block: 1.5rem;
+}
+.console-text section > p > span{
+    color: var(--green);
+}
+#exec{
+    all: unset;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+
+    background-color: var(--green);
+    color: var(--background-console);
+
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 200ms;
+}
+#exec:active{
+    background-color: var(--green-active);
+}
+h3{
+    margin-bottom: 1.4rem;
+    font-size: 2.4rem;
+}
+h4{
+    font-size: 1.8rem;
+    margin-block: 0.7rem;
+}
+p{
+    margin-block: 0.5rem 0.8rem;
+    font-size: 1.4rem;
+}
+p::before{
+    content: '-';
+    margin-right: 0.5rem;
+    color: var(--green-active);
+}
+h3, h4, p{
+    cursor: default;
+}
+hr{
+    margin-bottom: 3rem;
+}
