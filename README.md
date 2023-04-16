@@ -1,3 +1,2 @@
-# Fala Dev!!!
-## Meu Primeiro projeto
- 
+# Fala Dev! Beleza? 🤙
+> NetRun Terminal 
